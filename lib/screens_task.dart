@@ -13,7 +13,7 @@ class PaginaCompiti extends StatelessWidget {
       builder: (context, provider, child) {
         return Column(
           children: [
-            // --- ZONA SELEZIONE LISTA ---
+            //SELEZIONE LISTA
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
               color: Colors.blue[50],
@@ -46,7 +46,7 @@ class PaginaCompiti extends StatelessWidget {
               ),
             ),
 
-            // --- LISTA DEI TASK ---
+            //LISTA DEI TASK
             Expanded(
               child: ListView.builder(
                 itemCount: provider.listaCorrente.tasks.length,
@@ -104,9 +104,8 @@ class PaginaCompiti extends StatelessWidget {
 
 // Aggiungiamo un FloatingActionButton alla pagina principale per i task?
 // Per semplicità, mettiamo un bottone flottante separato dentro la pagina compiti
-// Nota: In Flutter, il FAB di solito sta nello Scaffold, ma possiamo usare un trucco o un bottone nella UI.
-// Per questo esempio, aggiungeremo un bottone "Aggiungi Task" in fondo alla lista o useremo un FloatingActionButton nello Scaffold.
-// MODIFICA: Per semplicità estrema, aggiungo un tasto "+ Aggiungi Elemento" persistente in basso.
+//ggiungeremo un bottone "Aggiungi Task" in fondo alla lista o useremo un FloatingActionButton nello Scaffold.
+//Per semplicità estrema, aggiungiamo un tasto "+ Aggiungi Elemento" persistente in basso.
 
 // Aggiorna lo Scaffold in main.dart per avere il floatingActionButton che chiama questo metodo:
 void mostraDialogAggiungiTask(BuildContext context) {

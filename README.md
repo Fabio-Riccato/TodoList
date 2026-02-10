@@ -1,16 +1,37 @@
-# todolist
+# To-Do List
 
-A new Flutter project.
+Un'applicazione To-Do List semplice realizzata in Flutter, progettata per gestire più liste di attività e monitorare la produttività tramite statistiche.
 
-## Getting Started
+**Nota Importante:** Questa versione dell'applicazione utilizza la gestione dello stato in memoria (RAM). **I dati non vengono salvati in modo permanente**: chiudendo e riaprendo l'app, le liste e i task torneranno allo stato iniziale.
 
-This project is a starting point for a Flutter application.
+## Funzionalità Principali
 
-A few resources to get you started if this is your first Flutter project:
+* **Multi-Lista:** Crea liste personalizzate per diverse categorie (es. Spesa, Lavoro, Studio).
+* **Gestione Task:** Aggiungi nuovi compiti, spuntali come completati o eliminali.
+* **Statistiche Dinamiche:** Una scheda dedicata mostra per ogni lista:
+    * Totale task inseriti.
+    * Task completati vs Task da svolgere.
+    * Barra di efficienza.
+* **Interfaccia a Schede:** Navigazione tra "Task" e "Statistiche" tramite TabBar.
+* **UI Pulita:** Utilizzo di gap per la spaziatura.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tecnologie e Pacchetti Utilizzati
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* **Flutter & Dart**: Framework UI e linguaggio.
+* **Provider**: Per la gestione dello stato (State Management) e e la consivisione dei dati tra le pagine.
+* **Gap**: Per la gestione semplificata degli spazi (margin/padding) nel layout.
+
+## Struttura del Progetto
+
+
+* main: Punto di iniziale dell'app, configurazione del tema e struttura della TabBar.
+* todo_provider: Contiene i modelli dei dati (Task, ListaDiTask). Gestisce l'aggiunta e la rimozione degli elementi.
+* screens_task: La schermata principale per selezionare le liste, aggiungere e gestire i task.
+* screens_stats: La schermata che calcola e visualizza i grafici di efficienza per ogni lista.
+
+
+
+## Sviluppi Futuri
+
+* Integrazione di sqflite per il salvataggio persistente dei dati.
+* Possibilità di modificare il nome delle liste.

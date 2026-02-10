@@ -26,7 +26,7 @@ class SchermataPrincipale extends StatelessWidget {
     // DefaultTabController gestisce le 2 schede (Task e Stats)
     return DefaultTabController(
       length: 2,
-      child:// Parte modificata di main.dart
+      child:
       Scaffold(
           appBar: AppBar(
             title: const Text("La Mia Todo List"),
@@ -50,7 +50,6 @@ class SchermataPrincipale extends StatelessWidget {
                 return FloatingActionButton(
                   child: const Icon(Icons.add),
                   onPressed: () {
-                    // Importa la funzione o definiscila qui
                     // Per semplicità, richiamiamo la logica qui:
                     final provider = Provider.of<TodoProvider>(context, listen: false);
                     final controller = TextEditingController();
